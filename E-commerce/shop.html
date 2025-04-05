@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - StyleHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>StyleHub</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#" id="search-icon"><i class="fas fa-search"></i></a>
+                <a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></a>
+                <a href="#" id="menu-icon"><i class="fas fa-bars"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="shop-main">
+        <aside class="filters">
+            <h2>Filters</h2>
+            <div class="filter-section">
+                <h3>Categories</h3>
+                <ul>
+                    <li><input type="checkbox" id="women"> <label for="women">Women</label></li>
+                    <li><input type="checkbox" id="men"> <label for="men">Men</label></li>
+                    <li><input type="checkbox" id="accessories"> <label for="accessories">Accessories</label></li>
+                </ul>
+            </div>
+            <div class="filter-section">
+                <h3>Price Range</h3>
+                <input type="range" id="price-range" min="0" max="1000" step="10">
+                <div class="price-inputs">
+                    <input type="number" id="min-price" placeholder="Min">
+                    <input type="number" id="max-price" placeholder="Max">
+                </div>
+            </div>
+            <div class="filter-section">
+                <h3>Size</h3>
+                <div class="size-buttons">
+                    <button>XS</button>
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                </div>
+            </div>
+            <button class="apply-filters">Apply Filters</button>
+        </aside>
+
+        <section class="products">
+            <div class="products-header">
+                <h2>All Products</h2>
+                <select id="sort-by">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest</option>
+                </select>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product cards will be dynamically populated -->
+            </div>
+
+            <div class="pagination">
+                <button class="prev-page">Previous</button>
+                <div class="page-numbers">
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                </div>
+                <button class="next-page">Next</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="cart-sidebar" class="sidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button id="close-cart">&times;</button>
+        </div>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <h3>Total: <span id="cart-total">$0.00</span></h3>
+            <button class="checkout-button">Checkout</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About StyleHub</h3>
+                <p>Your premier destination for modern fashion and style.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 StyleHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>
